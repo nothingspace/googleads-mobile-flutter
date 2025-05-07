@@ -1,5 +1,5 @@
 group = "io.flutter.plugins.googlemobileads.mediation.gma_mediation_moloco"
-version = "1.0.0"
+version = "1.3.0"
 
 buildscript {
     ext.kotlin_version = "1.8.22"
@@ -24,6 +24,10 @@ allprojects {
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 
+ext {
+    stringVersion = "3.9.0.0"
+}
+
 android {
     namespace = "io.flutter.plugins.googlemobileads.mediation.gma_mediation_moloco"
 
@@ -44,11 +48,11 @@ android {
     }
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 23
     }
 
     dependencies {
-        implementation("com.google.ads.mediation:moloco:3.6.1.0")
+        implementation("com.google.ads.mediation:moloco:$stringVersion")
         testImplementation 'junit:junit:4.13.2'
         testImplementation 'androidx.test:core:1.6.1'
         testImplementation 'androidx.test:core-ktx:1.6.1'
